@@ -54,7 +54,7 @@ namespace PackLogger
                 //Console.WriteLine("Looking for new pack");
                 await Task.Delay(500);
                 var openPacksInfo = this.MindVision.GetOpenPacksInfo();
-                if (openPacksInfo == null)
+                if (openPacksInfo?.PackOpening?.Cards == null)
                 {
                     continue;
                 }
